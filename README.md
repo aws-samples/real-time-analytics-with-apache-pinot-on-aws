@@ -73,7 +73,7 @@ npm install
 ```
 5. Deploy stack. You will need to provide as parameter your IP address. This is the IP address from where you will be able to connect to the Apache Pinot Controller UI. Make sure the IP address finishes with the /32 subnet mask format.
 ```shell
-cdk deploy --parameters IPAddress="<your-ip-address/32>"
+cdk deploy --parameters IpAddress="<your-ip-address/32>"
 ```
 6. Once the deployment finishes you can get from the CloudFormation output the Load Balancer DNS to access the UI
 
