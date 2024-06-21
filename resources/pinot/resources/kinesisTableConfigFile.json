@@ -1,0 +1,31 @@
+{
+  "tableName": "kinesisTable",
+  "tableType": "REALTIME",
+  "segmentsConfig": {
+    "timeColumnName": "creationTimestamp",
+    "replicasPerPartition": "1",
+    "replication": "1",
+    "retentionTimeUnit": "DAYS",
+    "retentionTimeValue": "7"
+  },
+  "tenants": {},
+  "tableIndexConfig": {
+    "loadMode": "MMAP",
+    "streamConfigs": {
+      "streamType": "kinesis",
+      "stream.kinesis.topic.name": "pinot-stream",
+      "region": "{AWSRegion}",
+      "shardIteratorType": "LATEST",
+      "stream.kinesis.consumer.type": "lowlevel",
+      "stream.kinesis.fetch.timeout.millis": "120000",
+      "stream.kinesis.decoder.class.name": "org.apache.pinot.plugin.stream.kafka.KafkaJSONMessageDecoder",
+      "stream.kinesis.consumer.factory.class.name": "org.apache.pinot.plugin.stream.kinesis.KinesisConsumerFactory",
+      "realtime.segment.flush.threshold.rows": "0",
+      "realtime.segment.flush.threshold.time": "2m",
+      "realtime.segment.flush.threshold.size": "150M"
+    }
+  },
+  "metadata": {
+    "customConfigs": {}
+  }
+}

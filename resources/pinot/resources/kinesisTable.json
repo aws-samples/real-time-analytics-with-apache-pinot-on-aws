@@ -1,0 +1,32 @@
+{
+  "schemaName" : "kinesisTable",
+  "dimensionFieldSpecs" : [ {
+    "name" : "userID",
+    "dataType" : "STRING"
+  }, {
+    "name" : "productName",
+    "dataType" : "STRING"
+  }, {
+    "name" : "color",
+    "dataType" : "STRING"
+  }, {
+    "name" : "department",
+    "dataType" : "STRING"
+  }, {
+    "name" : "product",
+    "dataType" : "STRING"
+  }, {
+    "name" : "campaign",
+    "dataType" : "STRING"
+  } ],
+  "metricFieldSpecs" : [ {
+    "name" : "price",
+    "dataType" : "INT"
+  } ],
+  "dateTimeFieldSpecs" : [ {
+    "name" : "creationTimestamp",
+    "dataType" : "STRING",
+    "format" : "SIMPLE_DATE_FORMAT|yyyy-MM-dd HH:mm:ss",
+    "granularity" : "1:DAYS"
+  } ]
+}
