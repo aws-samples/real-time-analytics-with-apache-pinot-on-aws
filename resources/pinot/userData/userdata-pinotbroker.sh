@@ -2,7 +2,7 @@
 
 sudo amazon-linux-extras install java-openjdk11 -y
 
-export PINOT_VERSION=0.12.1
+export PINOT_VERSION=1.2.0
 cd /home/ec2-user
 wget https://downloads.apache.org/pinot/apache-pinot-$PINOT_VERSION/apache-pinot-$PINOT_VERSION-bin.tar.gz
 

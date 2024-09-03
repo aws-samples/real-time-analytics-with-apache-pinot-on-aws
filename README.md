@@ -55,21 +55,21 @@ This solution deploys the following:
 
 Please replace with your account id and aws region
 
-1. Bootstrap the AWS CDK
-```shell
-cdk bootstrap aws://<account-id>/<aws-region>
-```
-2. Git clone this repository
+1. Git clone this repository
 ```shell
 git clone https://github.com/aws-samples/real-time-analytics-with-apache-pinot-on-aws.git
 ```
-3. Go into the repo
+2. Go into the repo
 ```shell
 cd real-time-analytics-with-apache-pinot-on-aws
 ```
-4. Install NPM libraries
+3. Install NPM libraries
 ```shell
 npm install
+```
+4. Bootstrap the AWS CDK
+```shell
+cdk bootstrap aws://<account-id>/<aws-region>
 ```
 5. Deploy stack. You will need to provide as parameter your IP address. This is the IP address from where you will be able to connect to the Apache Pinot Controller UI. Make sure the IP address finishes with the /32 subnet mask format.
 ```shell

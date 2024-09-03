@@ -2,7 +2,7 @@
 
 sudo amazon-linux-extras install java-openjdk11 -y
 
-export PINOT_VERSION=0.12.1
+export PINOT_VERSION=1.2.0
 cd /home/ec2-user
 
 S3BucketName=`aws s3api list-buckets --query 'Buckets[*].[Name]' --output text | grep "apache-pinot-solution" | grep "${AWS::Region}"`

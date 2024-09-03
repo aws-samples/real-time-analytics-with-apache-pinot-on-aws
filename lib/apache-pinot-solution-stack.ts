@@ -139,6 +139,7 @@ export class ApachePinotSolutionStack extends cdk.Stack {
     });
 
 
+
     const cfnInsZookeeper1 = zookeeperNode1.node.defaultChild as ec2.CfnInstance;
     cfnInsZookeeper1.addPropertyOverride('DisableApiTermination', true);
 
